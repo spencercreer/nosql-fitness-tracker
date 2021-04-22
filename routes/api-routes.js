@@ -4,8 +4,10 @@ const Workout = require("../models/Workout.js");
 module.exports = (app) => {
     // How to find most recent workout
     app.get("/api/workouts", (req, res) => {
-        Workout.find({}).sort({ "date": -1 }).limit(1)
+        console.log("hello")
+        Workout.find({})
             .then(dbWorkout => {
+                console.log(dbWorkout)
                 res.json(dbWorkout);
             })
             .catch(err => {
@@ -29,14 +31,14 @@ module.exports = (app) => {
     //     )
     // });
 
-    app.post("/api/workouts", ({ body }, res) => {
-        Workout.create(body)
-        .then(dbWorkout => {
-            res.json(dbWorkout);
-        })
-        .catch(err => {
-            res.status(400).json(err);
-        });
-    });
+    // app.post("/api/workouts", ({ body }, res) => {
+    //     Workout.create(body)
+    //     .then(dbWorkout => {
+    //         res.json(dbWorkout);
+    //     })
+    //     .catch(err => {
+    //         res.status(400).json(err);
+    //     });
+    // });
 
 }
