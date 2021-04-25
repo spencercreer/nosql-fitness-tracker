@@ -1,15 +1,12 @@
 const router = require('express').Router();
-// const mongoose = require('mongoose')
-const db  = require("../models");
-// const Workout = require("../models/Workout.js");
+const Workout  = require("../models/Workout");
 
 // get workouts, range, post for workouts, put 
 
-// How to find most recent workout
 router.get('/api/workouts', (req, res) => {
-    db.Workout.find({})
+    Workout.find({})
         .then(data => {
-            console.log(data)
+            // console.log(data)
             res.json(data);
         })
         .catch(err => {
@@ -17,11 +14,10 @@ router.get('/api/workouts', (req, res) => {
         });
 });
 
-// sort and limit methods
 router.get('/api/workouts/range', (req, res) => {
-    db.Workout.find({}).sort({ day: -1}).limit(1)
+    Workout.find({}).sort({ day: -1}).limit(1)
         .then(data => {
-            console.log(data)
+            // console.log(data)
             res.json(data);
         })
         .catch(err => {
@@ -30,7 +26,7 @@ router.get('/api/workouts/range', (req, res) => {
 });
 
 router.put("/api/workouts/:id", (req, res) => {
-    db.Workout.findOneAndUpdate(
+    Workout.findOneAndUpdate(
         {_id: req.params.id},
         { $push: { exercises: req.body}}
 
@@ -48,8 +44,9 @@ router.put("/api/workouts/:id", (req, res) => {
     )
 });
 
-router.post("/api/workouts", ( { body }, res) => {
-    db.Workout.create(body)
+router.post("/api/workouts", (req, res) => {
+    console.log(req.body);
+    Workout.insertMany(req.body)
     .then(data => {
         res.json(data);
     })

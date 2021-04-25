@@ -1,10 +1,7 @@
 const router = require('express').Router();
 const path = require('path');
 
-
-
-// MERN MongoDB/MySQL, Express, React, Node
-// three routes needed, home, stats, exercises
+// html routes home, stats, exercises
 
 router.get('/', (req,res) => {
     res.sendFile(path.join(__dirname, "../public/index.html"))
