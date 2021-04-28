@@ -53,7 +53,7 @@ function populateChart(data) {
       labels,
       datasets: [
         {
-          label: 'Workout Duration In Minutes',
+          label: 'Total Minutes',
           backgroundColor: 'red',
           borderColor: 'red',
           data: durations,
@@ -64,6 +64,7 @@ function populateChart(data) {
     options: {
       responsive: true,
       title: {
+        text: 'Workout Duration',
         display: true,
       },
       scales: {
@@ -80,6 +81,9 @@ function populateChart(data) {
             display: true,
             scaleLabel: {
               display: true,
+            },
+            ticks: {
+              beginAtZero: true,
             },
           },
         ],
@@ -138,7 +142,7 @@ function populateChart(data) {
       labels: workouts,
       datasets: [
         {
-          label: 'Exercises Performed',
+          label: 'Total Duration - Exercises Performed',
           backgroundColor: colors,
           data: durations,
         },
@@ -147,7 +151,7 @@ function populateChart(data) {
     options: {
       title: {
         display: true,
-        text: 'Exercises Performed',
+        text: 'Total Duration - Exercises Performed',
       },
     },
   });
@@ -158,7 +162,7 @@ function populateChart(data) {
       labels: workouts,
       datasets: [
         {
-          label: 'Exercises Performed',
+          label: 'Total Weight - Exercises Performed',
           backgroundColor: colors,
           data: pounds,
         },
@@ -167,7 +171,7 @@ function populateChart(data) {
     options: {
       title: {
         display: true,
-        text: 'Exercises Performed',
+        text: 'Total Weight - Exercises Performed',
       },
     },
   });
