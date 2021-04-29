@@ -1,7 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const logger = require('morgan');
-
+const uri = process.env.MONGODB_URI;
 const PORT = process.env.PORT || 3000;
 
 const app = express();
@@ -13,7 +13,7 @@ app.use(express.json());
 app.use(express.static('public'));
 
 mongoose.connect(
-  process.env.MONGODB_URI || 'mongodb+srv://screer:Slc2018GilAZ@cluster0.brokn.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
+  uri || 'mongodb://localhost/obscure-caverns-30025',
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
