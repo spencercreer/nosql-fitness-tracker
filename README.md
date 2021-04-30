@@ -2,7 +2,7 @@
 ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
 
 ## Description
-A workout tracker that allows users to log resistance and cardio workouts. This application sets uses a NoSQL MongoDB database to store the users workout data.
+A workout tracker that allows users to log resistance and cardio workouts. This application uses a NoSQL MongoDB database to store the users workout data.
 
 ## Table of Contents
 * [Links](#links)
