@@ -8,21 +8,23 @@ A workout tracker that allows users to log resistance and cardio workouts. This 
 * [Links](#links)
 * [Animation](#animation) 
 * [Instructions](#instructions) 
- * [Installation](#installations) 
- * [Tests](#tests) 
- * [Technologies](#technologies)  
- * [License](#license)
+* [Installation](#installations) 
+* [Tests](#tests) 
+* [Technologies](#technologies)  
+* [License](#license)
 * [Contact](#contact)
 
 ## Links
-Published URL: [TBD](TBD)
+Published URL: [https://nosql-fitness-log.herokuapp.com/](https://nosql-fitness-log.herokuapp.com/)
 
 Repository: [https://github.com/spencercreer/nosql-fitness-tracker](https://github.com/spencercreer/nosql-fitness-tracker)
 
 
 ## Animation
 The following animation demonstrates the application functionality:
-![NoSQL Fitness Tracker animation](TBD)
+</br>
+![NoSQL Fitness Tracker animation](./public/assets/fitness.gif)
+
 ## Instructions
 The homepage displays the last logged workout. The user may add another exercise to this workout by clicking the "Continue Workout" button. The user may begin a new workout by clicking the "New Workout" button. The dashboard provides an overview of workouts logged.
 ## Installation
