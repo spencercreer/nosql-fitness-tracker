@@ -27,15 +27,20 @@ The following animation demonstrates the application functionality:
 
 ## Instructions
 The homepage displays the last logged workout. The user may add another exercise to this workout by clicking the "Continue Workout" button. The user may begin a new workout by clicking the "New Workout" button. The dashboard provides an overview of workouts logged.
+
 ## Installation
+This application utilizes the following dependencies:
+
+ * express
+ * mongoose
+ * morgan
+
 To install necessary dependencies, run the following command:
 
   ```
   npm install
-  npm i express
-  npm i mongoose
-  npm i morgan
   ```
+
 ## Tests
 To run tests, run the following command:
 
@@ -45,6 +50,7 @@ To run tests, run the following command:
     
 ## Contribute
 Please submit a PR if you would like to contribute.
+
 ## Technologies
  * JavaScript
  * HTML
@@ -55,7 +61,6 @@ Please submit a PR if you would like to contribute.
  * Mongoose
  * Heroku
  * Express
-
 
 ## License
 This project is licensed under the MIT license.
